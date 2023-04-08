@@ -4,11 +4,7 @@ from calculator.core import Calculator
 # Create the Flask application
 app = Flask(__name__)
 
-# Create the Calculator object
-calculator = Calculator()
-
 # Create the routes
-
 @app.route('/')
 def index():
     return 'Index Page'
@@ -19,7 +15,7 @@ def add():
     data = request.get_json()
     a = data['a']
     b = data['b']
-    result = calculator.add(a, b)
+    result = Calculator(a, b).add()
     return jsonify(result)
 
 # Add a route for the subtract function
@@ -28,16 +24,7 @@ def subtract():
     data = request.get_json()
     a = data['a']
     b = data['b']
-    result = calculator.subtract(a, b)
-    return jsonify(result)
-
-# Add a route for the percent function
-@app.route('/api/percent/', methods=['POST'])
-def percent():
-    data = request.get_json()
-    a = data['a']
-    b = data['b']
-    result = calculator.percent(a, b)
+    result = Calculator(a, b).subtract()
     return jsonify(result)
 
 # Add a route for the multiply function
@@ -46,7 +33,7 @@ def multiply():
     data = request.get_json()
     a = data['a']
     b = data['b']
-    result = calculator.multiply(a, b)
+    result = Calculator(a, b).multiply()
     return jsonify(result)
 
 # Add a route for the divide function
@@ -57,7 +44,7 @@ def divide():
     b = data['b']
     if b == 0:
         return jsonify("Cannot divide by zero"), 400
-    result = calculator.divide(a, b)
+    result = Calculator(a, b).divide()
     return jsonify(result)
 
 

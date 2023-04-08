@@ -1,67 +1,42 @@
 class Calculator:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, a: int | float = None, b: int | float = None) -> None:
+        self.a = a
+        self.b = b
 
-    def add(self, a: int | float, b: int | float) -> int | float:
+    def add(self) -> int | float:
         """
         Add two numbers
-        param a: first number
-        param b: second number
         return: sum of two numbers
         """
-        return a + b
+        return self.a + self.b
 
-    def subtract(self, a: int | float, b: int | float) -> int | float:
+    def subtract(self) -> int | float:
         """
         Subtract two numbers
-        param a: first number
-        param b: second number
         return: difference of two numbers
         """
-        return a - b
+        return self.a - self.b
 
-    def multiply(self, a: int | float, b: int | float) -> int | float:
+    def multiply(self) -> int | float:
         """
         Multiply two numbers
-        param a: first number
-        param b: second number
         return: product of two numbers
         """
-        return a * b
+        return self.a * self.b
 
-    def divide(self, a: int | float, b: int | float) -> int | float:
+    def divide(self) -> int | float:
         """
         Divide two numbers
-        param a: first number
-        param b: second number
         return: quotient of two numbers
         """
-        if b != 0:
-            return a / b
+        if self.b != 0:
+            return self.a / self.b
         else:
             raise ZeroDivisionError("Cannot divide by zero")
 
-    def square(self, a: int | float) -> int | float:
+    def square(self) -> int | float:
         """
         Square a number
-        param a: number
         return: square of a number
         """
-        return a * a
-
-    def sqrt(self, a: int | float) -> int | float:
-        """
-        Square root of a number
-        param a: number
-        return: square root of a number
-        """
-        return a**0.5
-
-    def percent(self, a: int | float, b: int | float) -> int | float:
-        """
-        Percentage of a number
-        param a: number
-        param b: percentage
-        return: percentage of a number
-        """
-        return a * b / 100
+        return self.a**2
