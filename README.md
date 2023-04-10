@@ -1,8 +1,8 @@
 # PyTest Fixtures Example
 
-<!-- This repo contains the sample code for the article - [Automated Python Unit Testing Made Easy with Pytest and GitHub Actions](https://pytest-with-eric.com/integrations/pytest-github-actions/)
+This repo contains the sample code for the article - [How Pytest Fixtures Can Help You Write More Readable And Efficient Tests](https://pytest-with-eric.com/pytest-best-practices/pytest-fixtures/)
 
-This project explains how to automate the testing of your Python code using PyTest and GitHub Actions. -->
+This project explains how to automate the testing of your Python code using PyTest and GitHub Actions.
 
 # Requirements
 * Python (3.10.10)

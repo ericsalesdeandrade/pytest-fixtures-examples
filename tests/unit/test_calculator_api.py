@@ -1,16 +1,16 @@
-# import pytest
-# from app.app import app
+import pytest
+from app.app import app
 
 
-# @pytest.fixture
-# def client():
-#     with app.test_client() as client:
-#         yield client
+@pytest.fixture
+def client():
+    with app.test_client() as client:
+        yield client
 
 
-# @pytest.fixture
-# def json_headers():
-#     return {"Content-Type": "application/json"}
+@pytest.fixture
+def json_headers():
+    return {"Content-Type": "application/json"}
 
 
 def test_add(client, json_headers, json_data):

@@ -1,10 +1,9 @@
 import pytest
+from calculator.core import Calculator
 
-# from calculator.core import Calculator
-
-# @pytest.fixture
-# def calculator():
-#     return Calculator(2, 3)
+@pytest.fixture
+def calculator():
+    return Calculator(2, 3)
 
 
 ## Basic Calculator Testing with Predefined Fixture
